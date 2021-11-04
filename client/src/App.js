@@ -10,14 +10,26 @@ function App() {
         setResult(result.concat(e.target.name));
     };
 
+    //tout effacer
     //lorrsque j'appuie sur clear je remet mon result à zéro en renvoyant une chaine de caractère vide
     const clear = (e) => {
         setResult("");
     };
 
+    //effacer le dernier
     //lorsque j'appuie sur backSpace j'utilise la funciton js "slice" qui me permet de retirer un caractère de ma "length" de mon result)
     const backSpace = (e) => {
         setResult(result.slice(0, result.length - 1));
+    };
+
+    // ajouter
+    //j'utilise la funciton eval qui nous permet d'évaluer notre code reçu dans setResult
+    const calculate = () => {
+        try {
+            setResult(eval(result).toString());
+        } catch (err) {
+            setResult("error");
+        }
     };
     return (
         <>
@@ -118,7 +130,7 @@ function App() {
                         .
                     </button>
                     <button
-                        onClick={handleClick}
+                        onClick={calculate}
                         id="result"
                         className="highlight"
                     >
