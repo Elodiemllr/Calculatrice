@@ -14,7 +14,11 @@ function App() {
     const clear = (e) => {
         setResult("");
     };
-    const backSpace = (e) => {};
+
+    //lorsque j'appuie sur backSpace j'utilise la funciton js "slice" qui me permet de retirer un caractère de ma "length" de mon result)
+    const backSpace = (e) => {
+        setResult(result.slice(0, result.length - 1));
+    };
     return (
         <>
             <div className="container">
