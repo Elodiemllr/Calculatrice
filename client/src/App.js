@@ -9,6 +9,12 @@ function App() {
         //elle viendra mettre à jour result (notre input) en recuperant le "name" de mon  button (le name que contient mon event ) et en les concatainant ( en joignant les strings ensemble)
         setResult(result.concat(e.target.name));
     };
+
+    //lorrsque j'appuie sur clear je remet mon result à zéro en renvoyant une chaine de caractère vide
+    const clear = (e) => {
+        setResult("");
+    };
+    const backSpace = (e) => {};
     return (
         <>
             <div className="container">
@@ -16,8 +22,17 @@ function App() {
                     <input type="text" value={result} />
                 </form>
                 <div className="keypad">
-                    <button onClick={handleClick}> Clear </button>
-                    <button onClick={handleClick}>C </button>
+                    <button onClick={handleClick} id="clear" onClick={clear}>
+                        {" "}
+                        Clear{" "}
+                    </button>
+                    <button
+                        onClick={handleClick}
+                        id="backspace"
+                        onClick={backSpace}
+                    >
+                        C{" "}
+                    </button>
                     <button name="/" onClick={handleClick}>
                         &divide;{" "}
                     </button>
