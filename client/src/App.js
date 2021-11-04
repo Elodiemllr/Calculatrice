@@ -22,7 +22,12 @@ function App() {
                     <input type="text" value={result} />
                 </form>
                 <div className="keypad">
-                    <button onClick={handleClick} id="clear" onClick={clear}>
+                    <button
+                        onClick={handleClick}
+                        id="clear"
+                        onClick={clear}
+                        className="highlight"
+                    >
                         {" "}
                         Clear{" "}
                     </button>
@@ -30,10 +35,15 @@ function App() {
                         onClick={handleClick}
                         id="backspace"
                         onClick={backSpace}
+                        className="highlight"
                     >
                         C{" "}
                     </button>
-                    <button name="/" onClick={handleClick}>
+                    <button
+                        name="/"
+                        onClick={handleClick}
+                        className="highlight"
+                    >
                         &divide;{" "}
                     </button>
                     <button name="7" onClick={handleClick}>
@@ -47,7 +57,11 @@ function App() {
                         {" "}
                         9
                     </button>
-                    <button name="*" onClick={handleClick}>
+                    <button
+                        name="*"
+                        onClick={handleClick}
+                        className="highlight"
+                    >
                         &times;{" "}
                     </button>
                     <button name="4" onClick={handleClick}>
@@ -60,7 +74,11 @@ function App() {
                     <button name="6" onClick={handleClick}>
                         6{" "}
                     </button>
-                    <button name="-" onClick={handleClick}>
+                    <button
+                        name="-"
+                        onClick={handleClick}
+                        className="highlight"
+                    >
                         {" "}
                         &ndash;
                     </button>
@@ -76,7 +94,11 @@ function App() {
                         {" "}
                         3
                     </button>
-                    <button name="+" onClick={handleClick}>
+                    <button
+                        name="+"
+                        onClick={handleClick}
+                        className="highlight"
+                    >
                         {" "}
                         +
                     </button>
@@ -84,10 +106,21 @@ function App() {
                         {" "}
                         0
                     </button>
-                    <button name="." onClick={handleClick}>
+                    <button
+                        name="."
+                        onClick={handleClick}
+                        className="highlight"
+                    >
                         .
                     </button>
-                    <button onClick={handleClick}> =</button>
+                    <button
+                        onClick={handleClick}
+                        id="result"
+                        className="highlight"
+                    >
+                        {" "}
+                        =
+                    </button>
                 </div>
             </div>
         </>
